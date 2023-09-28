@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import Counter from '../Counter/Counter'
+import styles from './style.module.css'
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd}) => {
 
     return (
-        <div>
-            <h5>{item.title}</h5>
-            <img src={item.image} />
+        <div className={styles.contianer}>
+            <h5 className={styles.title} >{item.title}</h5>
+            <img src={item.image} className={styles.image}/>
             <p>
                 description: {item.description}
             </p>
@@ -16,7 +17,7 @@ const ItemDetail = ({ item }) => {
             <p>
                 category:  {item.category}
             </p>
-            <Counter />
+            <Counter onAdd={onAdd} />
         </div>
     )
 }
