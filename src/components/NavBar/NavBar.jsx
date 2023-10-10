@@ -8,12 +8,12 @@ const NavBar = ( ) => {
   return (
     <Navbar bg="dark" data-bs-theme="dark">
     <Container>
-      <Navbar.Brand href="#home">E-commerce</Navbar.Brand>
+      <Navbar.Brand >E-commerce</Navbar.Brand>
       <Nav className="me-auto">
         <NavLink className={( { isActive} ) => isActive ? "link-active navlink" : "navlink"} to="/">Home</NavLink>
-        <NavLink className={( { isActive} ) => isActive ? "link-active navlink" : "navlink"} to="/about">About</NavLink>
-        <NavLink  className={( { isActive} ) => isActive ? "link-active navlink" : "navlink"} to="/contact">Contact</NavLink>
-        <NavLink  className={( { isActive} ) => isActive ? "link-active navlink" : "navlink"} to="/user">Profile</NavLink>
+        <NavLink className={( { isActive} ) => isActive ? "link-active navlink" : "navlink"} to="/category/tablet">Tablets</NavLink>
+        <NavLink  className={( { isActive} ) => isActive ? "link-active navlink" : "navlink"} to="/category/smartphones">Smartphones</NavLink>
+        <NavLink  className={( { isActive} ) => isActive ? "link-active navlink" : "navlink"} to="/category/pc">Pc</NavLink>
         <NavLink  className={( { isActive} ) => isActive ? "link-active navlink" : "navlink"} to="/cart">Cart</NavLink>
       </Nav>
     </Container>

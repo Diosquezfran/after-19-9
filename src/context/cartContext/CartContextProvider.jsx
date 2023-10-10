@@ -7,24 +7,25 @@ const CartContextProvider = ({ children }) => {
         setCart([
             ...cart,
             {
-                item, q
+                ...item, quantity: q
             }
         ])
     };
 
     const removeItem = (id, q) => {
-        const newCart = cart.filter((el) => el.item.id !== id);
+        const newCart = cart.filter((el) => el.id !== id);
         setCart(newCart)
     };
 
     const clear = () => {
         setCart([])
     }
+
     const values = {
         cart,
         addItem,
         removeItem,
-        clear
+        clear,
     }
     return (
         <CartContext.Provider value={values}>

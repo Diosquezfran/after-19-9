@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import UserContext from '../../context/UserContext'
+import UserContext from '../../context/userContext/UserContext'
 
 const UserDetail = () => {
     const {user, editUser} = useContext(UserContext)

@@ -3,6 +3,7 @@ import ItemListContainer from '../components/Items/ItemListContainer'
 import { useParams } from 'react-router'
 
 const Home = () => {
+
   const params = useParams()
   return (
     <div>

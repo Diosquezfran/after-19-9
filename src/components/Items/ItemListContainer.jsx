@@ -16,7 +16,7 @@ const ItemListContainer = () => {
         const itemCollection = collection(db, "items");
 
 
-        const q = query(itemCollection, where("category", "==", "tablet"), where("price", "<=", price) );
+        const q = query(itemCollection );
 
         getDocs(q)
             .then(snapshot => {
