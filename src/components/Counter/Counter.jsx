@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-const Counter = ({onAdd}) => {
-    const [count, setCount] = useState(0)
+const Counter = ({onAdd, text = "Agregar al carrito", q = 1}) => {
+    const [count, setCount] = useState(q)
 
     const increment = () => {
         
@@ -17,7 +17,7 @@ const Counter = ({onAdd}) => {
         <button onClick={increment}>Agregar</button>
         <span>{ count }</span>
         <button onClick={decrement}>Restar</button>
-        <button onClick={() => onAdd(count) }>Agregar al carrito</button>
+        <button onClick={() => onAdd(count) }>{text}</button>
     </div>
   )
 }
